@@ -1,0 +1,40 @@
+@lightblue-color: #2a788f;
+@darkblue-color: #2d3246;
+
+/*For media querys*/
+@mixin media($queryString){
+    @media #{$queryString} {
+      @content;
+    }
+}
+
+/*for two color gradients*/
+.gradient2($onecolor,$twocolor) {
+    background: $onecolor; /* Old browsers */
+	background: -moz-linear-gradient(top,  $onecolor 0%, $twocolor 84%, $twocolor 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  $onecolor 0%,$twocolor 84%,$twocolor 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  $onecolor 0%,$twocolor 84%,$twocolor 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$onecolor', endColorstr='$twocolor',GradientType=0 ); /* IE6-9 */
+}
+
+html, body{width:100%; height:100%;}
+
+.login{.gradient2(@lightblue-color,@darkblue-color);}
+.login-wrap{top:50%; left:50%; text-align:center; max-width:300px; color:#fff; height:360px; position:absolute; margin-top:-180px; margin-left:-150px; width:100%;}
+.register input, .login-wrap input{padding:6px 16px 5px; line-height:31px; height:auto; color:#fff;}
+.register button, .register label, .login-wrap label, .login-wrap button{ border:0; text-align:center;}
+.register label, .login-wrap label{margin-top:20px; padding:0; background:rgba(255, 255, 255, 0); border-bottom:1px solid rgba(255,255,255,0.5);}
+.register button, .login-wrap .login-button{display:block; width:100%; margin-bottom:20px; border-radius:15px; /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#6acce7+0,70d297+61,70d297+100 */
+background: #6acce7; /* Old browsers */
+background: -moz-linear-gradient(45deg,  #6acce7 0%, #70d297 61%, #70d297 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(45deg,  #6acce7 0%,#70d297 61%,#70d297 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(45deg,  #6acce7 0%,#70d297 61%,#70d297 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6acce7', endColorstr='#70d297',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */ color:#fff;}
+.register a, .login-wrap a{display:inline-block; color:#fff; text-decoration:none; padding:0 8px;}
+
+
+.bar.inner-page, .content.inner-page{background:#6ac2da;}
+.bar.inner-page{border-color:#6ac2da;}
+.bar.inner-page .button.back-button{color:#fff;}
+h1.title{color:#fff;}
+.register{text-align:center; max-width:300px; width:100%; margin:0 auto;}

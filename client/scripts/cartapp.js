@@ -1,19 +1,22 @@
 if (Meteor.isClient) {
   // counter starts at 0
   Session.setDefault('counter', 0);
-
-  Template.hello.helpers({
-    counter: function () {
-      return Session.get('counter');
+  
+  Template.loginScreen.events({
+    'click button': function(){
+        Router.go('/dashboard');
     }
   });
-
-  Template.hello.events({
-    'click button': function () {
-      // increment the counter when button is clicked
-      Session.set('counter', Session.get('counter') + 1);
-    }
-  });
+  
+  
+  Template.dashboard.rendered = function() {
+	  IonSideMenu.snapper.disable();
+	};
+	
+	Template.dashboard.destroyed = function() {
+	  IonSideMenu.snapper.enable();
+	};
+  
 }
 
 if (Meteor.isServer) {

@@ -1,4 +1,3 @@
-
 <template name="layout">
   {{#ionBody class="inner"}}
     {{#ionNavView}}
@@ -18,54 +17,64 @@
     {{/ionNavView}}
   {{/ionBody}}
 </template>
+<template name="layout-pages">
+  {{#ionBody}}
 
-<template name="loginScreen">
-{{#ionView}}
-  {{#ionContent class="no-header login"}}
-    	<section class="login-wrap">
-        	<img src="images/logo.png">
-            <div class="list">
-              <label class="item item-input">
-                <input type="text" placeholder="Username">
-              </label>
-              <label class="item item-input">
-                <input type="password" placeholder="Password">
-              </label>
-            </div>
-            <button type="submit" class="button login-button">Login</button>
-            <a href="/register">Register</a> | <a href="/forgot">Forgot Password?</a>
-        </section>
-  {{/ionContent}}
-{{/ionView}}
-</template>
-
-<template name="register">
-    {{#contentFor "headerButtonLeft"}}
-      {{>ionNavBackButton}}
-    {{/contentFor}}
-    
-    {{#contentFor "headerTitle"}}
-      <h1 class="title">Register</h1>
-    {{/contentFor}}
-    <section class="register">
-        <div class="list">
-          <label class="item item-input">
-            <input type="text" placeholder="First Name">
-          </label>
-          <label class="item item-input">
-            <input type="text" placeholder="Last Name">
-          </label>
-          <label class="item item-input">
-            <input type="text" placeholder="Email-Id">
-          </label>
-          <label class="item item-input">
-            <input type="password" placeholder="Password">
-          </label>
-          <label class="item item-input">
-            <input type="password" placeholder="Confirm Password">
-          </label>
-        </div>
-        <button type="submit" class="button login-button">Register</button>
-        <a href="/">Already Login?</a>
-    </section>
+    {{#ionSideMenuContainer side="left"}}
+      {{#ionSideMenu expose-aside-when="large"}}
+          <div class="bar bar-header bar-dark">
+            <h1 class="title">Piyush</h1>
+          </div>
+          {{#ionContent class="pages"}}
+            <ul class="sidemenus">
+            	<li><a href="/dashboard">Home</a></li>
+            	<li><a href="/category">Electronics</a>
+                	<ul>
+                    	<li><a href="/category">Mobiles</a></li>
+                    	<li><a href="/category">Mobile Accessories</a></li>
+                    	<li><a href="/category">Tvs &amp; Large Appliances</a></li>
+                    	<li><a href="/category">IT Accessories</a></li>
+                    	<li><a href="/category">Mobiles</a></li>
+                    	<li><a href="/category">Mobiles</a></li>
+                    	<li><a href="/category">Mobile Accessories</a></li>
+                    	<li><a href="/category">Tvs &amp; Large Appliances</a></li>
+                    	<li><a href="/category">IT Accessories</a></li>
+                    	<li><a href="/category">Mobiles</a></li>
+                    </ul>
+                </li>
+            	<li><a href="/category">Mens</a>
+                	<ul>
+                    	<li><a href="/category">Clothing</a></li>
+                    	<li><a href="/category">Footwear</a></li>
+                    	<li><a href="/category">Watches</a></li>
+                    	<li><a href="/category">Eyewear</a></li>
+                    	<li><a href="/category">Spectacles</a></li>
+                    	<li><a href="/category">Perfumes</a></li>
+                    </ul>
+                </li>
+            	<li><a href="/category">Womens</a>
+                	<ul>
+                    	<li><a href="/category">Clothing</a></li>
+                    	<li><a href="/category">Footwear</a></li>
+                    	<li><a href="/category">Watches</a></li>
+                    	<li><a href="/category">Eyewear</a></li>
+                    	<li><a href="/category">Spectacles</a></li>
+                    	<li><a href="/category">Perfumes</a></li>
+                    </ul>
+                </li>
+            </ul>
+          {{/ionContent}}
+        {{/ionSideMenu}}
+      {{#ionSideMenuContent}}
+        {{> ionNavBar class="inner-page"}}
+        {{#ionNavView}}
+            {{#ionView}}
+              {{#ionContent class="pages"}}
+                  {{> yield}}
+              {{/ionContent}}
+            {{/ionView}}
+        {{/ionNavView}}
+      {{/ionSideMenuContent}}      
+    {{/ionSideMenuContainer}}    
+  {{/ionBody}}
 </template>

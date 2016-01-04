@@ -23,3 +23,5 @@ iron:router
 meteoric:ionic-sass
 meteoric:ionic
 meteoric:ionicons-sass
+fortawesome:fontawesome
+udondan:slick

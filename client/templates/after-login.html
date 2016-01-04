@@ -1,0 +1,111 @@
+<template name="headerleft">
+    {{#contentFor "headerButtonLeft"}}
+        <button class="button button-clear pull-left" data-ion-menu-toggle="left">
+            {{> ionIcon icon='navicon'}}
+        </button>
+    {{/contentFor}}
+</template>
+<template name="headerright">
+    {{#contentFor "headerButtonRight"}}
+    	<div class="right-buttons">
+            <a href="/search" class="button button-icon icon ion-android-search"></a>
+            <a href="/cart" class="button button-icon icon ion-bag"></a>
+            <a class="button button-icon icon ion-android-more-vertical" data-ion-popover="_myPopover"></a>
+        </div>
+    {{/contentFor}}
+</template>
+<template name="_myPopover">
+  {{#ionPopover}}
+    <div class="content">
+      <div class="list">
+          <a class="item item-icon-left" href="#">
+            <i class="icon ion-ios-person-outline"></i>
+            My Account
+          </a>        
+          <a class="item item-icon-left" href="#">
+            <i class="icon ion-ios-cart-outline"></i>
+            My Orders
+          </a>        
+          <a class="item item-icon-left" href="#">
+            <i class="icon ion-ios-lightbulb-outline"></i>
+            Help Centre
+          </a>        
+          <a class="item item-icon-left" href="#">
+            <i class="icon ion-android-star-outline"></i>
+            Rate the app
+          </a>        
+        </div>
+    </div>
+  {{/ionPopover}}
+</template>
+<template name="dashboard">
+    {{> headerleft}}
+    {{#contentFor "headerTitle"}}
+      <h1 class="title">Dashboard</h1>
+    {{/contentFor}}
+    {{> headerright}}
+    <section class="pages">
+        {{#ionSlideBox}}
+            {{#ionSlide class="light-bg"}}
+              <img src="images/banner1.jpg">
+            {{/ionSlide}}
+            {{#ionSlide class="positive-bg"}}
+              <img src="images/banner2.jpg">
+            {{/ionSlide}}
+        {{/ionSlideBox}}
+        <section class="restpage">
+        	<div class="row">
+              <div class="col col-33"><img src="images/banner_static1.jpg"></div>
+              <div class="col col-33"><img src="images/banner_static2.jpg"></div>
+              <div class="col col-33"><img src="images/banner_static3.jpg"></div>
+            </div>
+            <h2>Featured Products <a href="javascript:void(0);">view all &raquo;</a></h2>
+            <div class="products">
+            	<div class="product-div">
+                	<div class="imgdiv">
+                        <div class="product-details">
+                            <a class="view-detail" href="javascript:void(0);"><i class="icon ion-ios-search"></i></a>
+                            <div class="options">
+                                <a class="add-cart" href="javascript:void(0);"><i class="icon ion-android-favorite-outline"></i></a>
+                                <a class="add-wishlist" href="javascript:void(0);"><i class="icon ion-bag"></i></a>
+                                <a class="add-share" href="javascript:void(0);"><i class="icon ion-android-share-alt"></i></a>
+                            </div>
+                            <div class="prodetails">
+                            	<div class="name">
+                                	The California
+                                    <label>Republic Chino</label>
+                                </div>
+                            	<div class="rates">
+                                	<label class="old-rate">24999.99 <span class="currency">usd</span></label>
+                                    14499.99 <span class="currency">usd</span>
+                                </div>
+                            </div>
+                        </div>
+                        <img src="images/p1.jpg">
+                    </div>
+                </div>
+            	<div class="product-div">
+                	<img src="images/p2.jpg">
+                </div>
+            </div>
+        </section>
+    </section>
+</template>
+<template name="cart">
+    {{> headerleft}}
+    {{#contentFor "headerTitle"}}
+      <h1 class="title">Shopping Cart</h1>
+    {{/contentFor}}
+    {{> headerright}}
+    <section class="pages">
+    </section>
+</template>
+<template name="search">
+    {{> headerleft}}
+    {{#contentFor "headerTitle"}}
+      <h1 class="title">Search</h1>
+    {{/contentFor}}
+    {{> headerright}}
+    <section class="pages">
+    </section>
+</template>

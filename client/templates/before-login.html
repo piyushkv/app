@@ -1,0 +1,70 @@
+
+<template name="loginScreen">
+{{#ionView}}
+  {{#ionContent class="no-header login"}}
+    	<section class="login-wrap">
+        	<img src="images/logo.png">
+            <div class="list">
+              <label class="item item-input">
+                <input type="text" placeholder="Username">
+              </label>
+              <label class="item item-input">
+                <input type="password" placeholder="Password">
+              </label>
+            </div>
+            <button type="submit" class="button login-button">Login</button>
+            <a href="/register">Register</a> | <a href="/forgot">Forgot Password?</a>
+        </section>
+  {{/ionContent}}
+{{/ionView}}
+</template>
+
+<template name="register">
+    {{#contentFor "headerButtonLeft"}}
+      {{>ionNavBackButton}}
+    {{/contentFor}}
+    
+    {{#contentFor "headerTitle"}}
+      <h1 class="title">Register</h1>
+    {{/contentFor}}
+    <section class="register">
+        <div class="list">
+          <label class="item item-input">
+            <input type="text" placeholder="First Name">
+          </label>
+          <label class="item item-input">
+            <input type="text" placeholder="Last Name">
+          </label>
+          <label class="item item-input">
+            <input type="text" placeholder="Email-Id">
+          </label>
+          <label class="item item-input">
+            <input type="password" placeholder="Password">
+          </label>
+          <label class="item item-input">
+            <input type="password" placeholder="Confirm Password">
+          </label>
+        </div>
+        <button type="submit" class="button login-button">Register</button>
+        <a href="/">Already Login?</a>
+    </section>
+</template>
+
+<template name="forgot">
+    {{#contentFor "headerButtonLeft"}}
+      {{>ionNavBackButton}}
+    {{/contentFor}}
+    
+    {{#contentFor "headerTitle"}}
+      <h1 class="title">Forgot Password?</h1>
+    {{/contentFor}}
+    <section class="register">
+        <div class="list">
+          <label class="item item-input">
+            <input type="text" placeholder="Email-Id">
+          </label>
+        </div>
+        <button type="submit" class="button login-button">Reset your Password</button>
+        <a href="/register">Register</a> | <a href="/">Already Login?</a>
+    </section>
+</template>
