@@ -7,6 +7,11 @@ if (Meteor.isClient) {
         Router.go('/dashboard');
     }
   });
+  Template.cart.events({
+    'click .delcart': function(e){
+        $(e.currentTarget).parent(".item").fadeOut();
+    }
+  });
   
   
   Template.dashboard.rendered = function() {
