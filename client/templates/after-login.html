@@ -3,12 +3,16 @@
         <button class="button button-clear pull-left" data-ion-menu-toggle="left">
             {{> ionIcon icon='navicon'}}
         </button>
+        <div class="searchbox">
+        	<input type="search" id="searchInput" placeholder="Search your product or keywords">
+            <a class="close-search" href="javascript:void(0);">{{> ionIcon icon="android-close"}}</a>
+        </div>
     {{/contentFor}}
 </template>
 <template name="headerright">
     {{#contentFor "headerButtonRight"}}
     	<div class="right-buttons">
-            <a href="/search" class="button button-icon icon ion-android-search"></a>
+            <a href="javascript:void(0);" class="button button-icon icon ion-android-search search"></a>
             <a href="/cart" class="button button-icon icon ion-bag"><span>5</span></a>
             <a class="button button-icon icon ion-android-more-vertical" data-ion-popover="_myPopover"></a>
         </div>
@@ -505,7 +509,394 @@
       <h1 class="title">Search</h1>
     {{/contentFor}}
     {{> headerright}}
-    <section class="pages">
+    <section class="searchkeywords">
+    	<a href="javascript:void(0)">Search<span class="deleteTag">{{> ionIcon icon="android-close"}}</span></a>
+    	<a href="javascript:void(0)">Item<span class="deleteTag">{{> ionIcon icon="android-close"}}</span></a>
+    </section>
+    <section class="searchitems">
+        <div class="products">
+            <div class="product-div">
+                <div class="imgdiv">
+                    <div class="product-details">
+                        <a class="view-detail" href="javascript:void(0);"><i class="icon ion-ios-search"></i></a>
+                        <div class="options">
+                            <a class="add-cart" href="javascript:void(0);"><i class="icon ion-android-favorite-outline"></i></a>
+                            <a class="add-wishlist" href="javascript:void(0);"><i class="icon ion-bag"></i></a>
+                            <a class="add-share" href="javascript:void(0);"><i class="icon ion-android-share-alt"></i></a>
+                        </div>
+                        <div class="prodetails">
+                            <div class="name">
+                                The California
+                                <label>Republic Chino</label>
+                            </div>
+                            <div class="rates">
+                                <label class="old-rate">24999.99 <span class="currency">usd</span></label>
+                                14499.99 <span class="currency">usd</span>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="images/p1.jpg">
+                </div>
+            </div>
+            <div class="product-div">
+                <div class="imgdiv">
+                    <div class="product-details">
+                        <a class="view-detail" href="javascript:void(0);"><i class="icon ion-ios-search"></i></a>
+                        <div class="options">
+                            <a class="add-cart" href="javascript:void(0);"><i class="icon ion-android-favorite-outline"></i></a>
+                            <a class="add-wishlist" href="javascript:void(0);"><i class="icon ion-bag"></i></a>
+                            <a class="add-share" href="javascript:void(0);"><i class="icon ion-android-share-alt"></i></a>
+                        </div>
+                        <div class="prodetails">
+                            <div class="name">
+                                The California
+                                <label>Republic Chino</label>
+                            </div>
+                            <div class="rates">
+                                <label class="old-rate">24999.99 <span class="currency">usd</span></label>
+                                14499.99 <span class="currency">usd</span>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="images/p2.jpg">
+                </div>
+            </div>
+            <div class="product-div">
+                <div class="imgdiv">
+                    <div class="product-details">
+                        <a class="view-detail" href="javascript:void(0);"><i class="icon ion-ios-search"></i></a>
+                        <div class="options">
+                            <a class="add-cart" href="javascript:void(0);"><i class="icon ion-android-favorite-outline"></i></a>
+                            <a class="add-wishlist" href="javascript:void(0);"><i class="icon ion-bag"></i></a>
+                            <a class="add-share" href="javascript:void(0);"><i class="icon ion-android-share-alt"></i></a>
+                        </div>
+                        <div class="prodetails">
+                            <div class="name">
+                                The California
+                                <label>Republic Chino</label>
+                            </div>
+                            <div class="rates">
+                                <label class="old-rate">24999.99 <span class="currency">usd</span></label>
+                                14499.99 <span class="currency">usd</span>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="images/p3.jpg">
+                </div>
+            </div>
+            <div class="product-div">
+                <div class="imgdiv">
+                    <div class="product-details">
+                        <a class="view-detail" href="javascript:void(0);"><i class="icon ion-ios-search"></i></a>
+                        <div class="options">
+                            <a class="add-cart" href="javascript:void(0);"><i class="icon ion-android-favorite-outline"></i></a>
+                            <a class="add-wishlist" href="javascript:void(0);"><i class="icon ion-bag"></i></a>
+                            <a class="add-share" href="javascript:void(0);"><i class="icon ion-android-share-alt"></i></a>
+                        </div>
+                        <div class="prodetails">
+                            <div class="name">
+                                The California
+                                <label>Republic Chino</label>
+                            </div>
+                            <div class="rates">
+                                <label class="old-rate">24999.99 <span class="currency">usd</span></label>
+                                14499.99 <span class="currency">usd</span>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="images/p4.jpg">
+                </div>
+            </div>
+            <div class="product-div">
+                <div class="imgdiv">
+                    <div class="product-details">
+                        <a class="view-detail" href="javascript:void(0);"><i class="icon ion-ios-search"></i></a>
+                        <div class="options">
+                            <a class="add-cart" href="javascript:void(0);"><i class="icon ion-android-favorite-outline"></i></a>
+                            <a class="add-wishlist" href="javascript:void(0);"><i class="icon ion-bag"></i></a>
+                            <a class="add-share" href="javascript:void(0);"><i class="icon ion-android-share-alt"></i></a>
+                        </div>
+                        <div class="prodetails">
+                            <div class="name">
+                                The California
+                                <label>Republic Chino</label>
+                            </div>
+                            <div class="rates">
+                                <label class="old-rate">24999.99 <span class="currency">usd</span></label>
+                                14499.99 <span class="currency">usd</span>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="images/p5.jpg">
+                </div>
+            </div>
+            <div class="product-div">
+                <div class="imgdiv">
+                    <div class="product-details">
+                        <a class="view-detail" href="javascript:void(0);"><i class="icon ion-ios-search"></i></a>
+                        <div class="options">
+                            <a class="add-cart" href="javascript:void(0);"><i class="icon ion-android-favorite-outline"></i></a>
+                            <a class="add-wishlist" href="javascript:void(0);"><i class="icon ion-bag"></i></a>
+                            <a class="add-share" href="javascript:void(0);"><i class="icon ion-android-share-alt"></i></a>
+                        </div>
+                        <div class="prodetails">
+                            <div class="name">
+                                The California
+                                <label>Republic Chino</label>
+                            </div>
+                            <div class="rates">
+                                <label class="old-rate">24999.99 <span class="currency">usd</span></label>
+                                14499.99 <span class="currency">usd</span>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="images/p6.jpg">
+                </div>
+            </div>
+            <div class="product-div">
+                <div class="imgdiv">
+                    <div class="product-details">
+                        <a class="view-detail" href="javascript:void(0);"><i class="icon ion-ios-search"></i></a>
+                        <div class="options">
+                            <a class="add-cart" href="javascript:void(0);"><i class="icon ion-android-favorite-outline"></i></a>
+                            <a class="add-wishlist" href="javascript:void(0);"><i class="icon ion-bag"></i></a>
+                            <a class="add-share" href="javascript:void(0);"><i class="icon ion-android-share-alt"></i></a>
+                        </div>
+                        <div class="prodetails">
+                            <div class="name">
+                                The California
+                                <label>Republic Chino</label>
+                            </div>
+                            <div class="rates">
+                                <label class="old-rate">24999.99 <span class="currency">usd</span></label>
+                                14499.99 <span class="currency">usd</span>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="images/p7.jpg">
+                </div>
+            </div>
+            <div class="product-div">
+                <div class="imgdiv">
+                    <div class="product-details">
+                        <a class="view-detail" href="javascript:void(0);"><i class="icon ion-ios-search"></i></a>
+                        <div class="options">
+                            <a class="add-cart" href="javascript:void(0);"><i class="icon ion-android-favorite-outline"></i></a>
+                            <a class="add-wishlist" href="javascript:void(0);"><i class="icon ion-bag"></i></a>
+                            <a class="add-share" href="javascript:void(0);"><i class="icon ion-android-share-alt"></i></a>
+                        </div>
+                        <div class="prodetails">
+                            <div class="name">
+                                The California
+                                <label>Republic Chino</label>
+                            </div>
+                            <div class="rates">
+                                <label class="old-rate">24999.99 <span class="currency">usd</span></label>
+                                14499.99 <span class="currency">usd</span>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="images/p8.jpg">
+                </div>
+            </div>
+            <div class="product-div">
+                <div class="imgdiv">
+                    <div class="product-details">
+                        <a class="view-detail" href="javascript:void(0);"><i class="icon ion-ios-search"></i></a>
+                        <div class="options">
+                            <a class="add-cart" href="javascript:void(0);"><i class="icon ion-android-favorite-outline"></i></a>
+                            <a class="add-wishlist" href="javascript:void(0);"><i class="icon ion-bag"></i></a>
+                            <a class="add-share" href="javascript:void(0);"><i class="icon ion-android-share-alt"></i></a>
+                        </div>
+                        <div class="prodetails">
+                            <div class="name">
+                                The California
+                                <label>Republic Chino</label>
+                            </div>
+                            <div class="rates">
+                                <label class="old-rate">24999.99 <span class="currency">usd</span></label>
+                                14499.99 <span class="currency">usd</span>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="images/p9.jpg">
+                </div>
+            </div>
+            <div class="product-div">
+                <div class="imgdiv">
+                    <div class="product-details">
+                        <a class="view-detail" href="javascript:void(0);"><i class="icon ion-ios-search"></i></a>
+                        <div class="options">
+                            <a class="add-cart" href="javascript:void(0);"><i class="icon ion-android-favorite-outline"></i></a>
+                            <a class="add-wishlist" href="javascript:void(0);"><i class="icon ion-bag"></i></a>
+                            <a class="add-share" href="javascript:void(0);"><i class="icon ion-android-share-alt"></i></a>
+                        </div>
+                        <div class="prodetails">
+                            <div class="name">
+                                The California
+                                <label>Republic Chino</label>
+                            </div>
+                            <div class="rates">
+                                <label class="old-rate">24999.99 <span class="currency">usd</span></label>
+                                14499.99 <span class="currency">usd</span>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="images/p1.jpg">
+                </div>
+            </div>
+            <div class="product-div">
+                <div class="imgdiv">
+                    <div class="product-details">
+                        <a class="view-detail" href="javascript:void(0);"><i class="icon ion-ios-search"></i></a>
+                        <div class="options">
+                            <a class="add-cart" href="javascript:void(0);"><i class="icon ion-android-favorite-outline"></i></a>
+                            <a class="add-wishlist" href="javascript:void(0);"><i class="icon ion-bag"></i></a>
+                            <a class="add-share" href="javascript:void(0);"><i class="icon ion-android-share-alt"></i></a>
+                        </div>
+                        <div class="prodetails">
+                            <div class="name">
+                                The California
+                                <label>Republic Chino</label>
+                            </div>
+                            <div class="rates">
+                                <label class="old-rate">24999.99 <span class="currency">usd</span></label>
+                                14499.99 <span class="currency">usd</span>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="images/p2.jpg">
+                </div>
+            </div>
+            <div class="product-div">
+                <div class="imgdiv">
+                    <div class="product-details">
+                        <a class="view-detail" href="javascript:void(0);"><i class="icon ion-ios-search"></i></a>
+                        <div class="options">
+                            <a class="add-cart" href="javascript:void(0);"><i class="icon ion-android-favorite-outline"></i></a>
+                            <a class="add-wishlist" href="javascript:void(0);"><i class="icon ion-bag"></i></a>
+                            <a class="add-share" href="javascript:void(0);"><i class="icon ion-android-share-alt"></i></a>
+                        </div>
+                        <div class="prodetails">
+                            <div class="name">
+                                The California
+                                <label>Republic Chino</label>
+                            </div>
+                            <div class="rates">
+                                <label class="old-rate">24999.99 <span class="currency">usd</span></label>
+                                14499.99 <span class="currency">usd</span>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="images/p3.jpg">
+                </div>
+            </div>
+            <div class="product-div">
+                <div class="imgdiv">
+                    <div class="product-details">
+                        <a class="view-detail" href="javascript:void(0);"><i class="icon ion-ios-search"></i></a>
+                        <div class="options">
+                            <a class="add-cart" href="javascript:void(0);"><i class="icon ion-android-favorite-outline"></i></a>
+                            <a class="add-wishlist" href="javascript:void(0);"><i class="icon ion-bag"></i></a>
+                            <a class="add-share" href="javascript:void(0);"><i class="icon ion-android-share-alt"></i></a>
+                        </div>
+                        <div class="prodetails">
+                            <div class="name">
+                                The California
+                                <label>Republic Chino</label>
+                            </div>
+                            <div class="rates">
+                                <label class="old-rate">24999.99 <span class="currency">usd</span></label>
+                                14499.99 <span class="currency">usd</span>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="images/p4.jpg">
+                </div>
+            </div>
+            <div class="product-div">
+                <div class="imgdiv">
+                    <div class="product-details">
+                        <a class="view-detail" href="javascript:void(0);"><i class="icon ion-ios-search"></i></a>
+                        <div class="options">
+                            <a class="add-cart" href="javascript:void(0);"><i class="icon ion-android-favorite-outline"></i></a>
+                            <a class="add-wishlist" href="javascript:void(0);"><i class="icon ion-bag"></i></a>
+                            <a class="add-share" href="javascript:void(0);"><i class="icon ion-android-share-alt"></i></a>
+                        </div>
+                        <div class="prodetails">
+                            <div class="name">
+                                The California
+                                <label>Republic Chino</label>
+                            </div>
+                            <div class="rates">
+                                <label class="old-rate">24999.99 <span class="currency">usd</span></label>
+                                14499.99 <span class="currency">usd</span>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="images/p5.jpg">
+                </div>
+            </div>
+            <div class="product-div">
+                <div class="imgdiv">
+                    <div class="product-details">
+                        <a class="view-detail" href="javascript:void(0);"><i class="icon ion-ios-search"></i></a>
+                        <div class="options">
+                            <a class="add-cart" href="javascript:void(0);"><i class="icon ion-android-favorite-outline"></i></a>
+                            <a class="add-wishlist" href="javascript:void(0);"><i class="icon ion-bag"></i></a>
+                            <a class="add-share" href="javascript:void(0);"><i class="icon ion-android-share-alt"></i></a>
+                        </div>
+                        <div class="prodetails">
+                            <div class="name">
+                                The California
+                                <label>Republic Chino</label>
+                            </div>
+                            <div class="rates">
+                                <label class="old-rate">24999.99 <span class="currency">usd</span></label>
+                                14499.99 <span class="currency">usd</span>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="images/p6.jpg">
+                </div>
+            </div>
+            <div class="product-div">
+                <div class="imgdiv">
+                    <div class="product-details">
+                        <a class="view-detail" href="javascript:void(0);"><i class="icon ion-ios-search"></i></a>
+                        <div class="options">
+                            <a class="add-cart" href="javascript:void(0);"><i class="icon ion-android-favorite-outline"></i></a>
+                            <a class="add-wishlist" href="javascript:void(0);"><i class="icon ion-bag"></i></a>
+                            <a class="add-share" href="javascript:void(0);"><i class="icon ion-android-share-alt"></i></a>
+                        </div>
+                        <div class="prodetails">
+                            <div class="name">
+                                The California
+                                <label>Republic Chino</label>
+                            </div>
+                            <div class="rates">
+                                <label class="old-rate">24999.99 <span class="currency">usd</span></label>
+                                14499.99 <span class="currency">usd</span>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="images/p7.jpg">
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+<template name="productpage">
+    {{> headerleft}}
+    {{#contentFor "headerTitle"}}
+      <h1 class="title">Product Name</h1>
+    {{/contentFor}}
+    {{> headerright}}
+    <section class="searchkeywords productpage">
+    	<a href="">Add to wishlist</a>
+    	<a href="">Add to cart</a>
+    </section>
+    <section class="searchitems productpage">
     </section>
 </template>
 <template name="category">

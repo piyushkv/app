@@ -13,14 +13,49 @@ if (Meteor.isClient) {
     }
   });
   
+  Template.layoutPages.events({
+    'click .search': function(){
+		$(".searchbox").fadeIn();
+    },
+    'click .close-search': function(){
+		$(".searchbox").fadeOut();
+    },
+    'change #searchInput': function(){
+        console.log("You clicked something");
+		$(".searchbox").fadeOut();
+        Router.go('/search');
+    },
+    'click .view-detail': function(){
+        Router.go('/productpage');
+    }
+});
+  Template.search.events({
+    'click .deleteTag': function(e){
+        $(e.currentTarget).parent("a").fadeOut();
+    }
+  });
+
+
   
-  Template.dashboard.rendered = function() {
-	  IonSideMenu.snapper.disable();
-	};
+  Template.search.onRendered(function() {
+	  $(".pages.overflow-scroll").addClass("noscroll");
+	  var scrollHeight = $(".overflow-scroll").innerHeight() - $(".searchkeywords").innerHeight();
+	  $(".searchitems").height(scrollHeight);
+	});
 	
-	Template.dashboard.destroyed = function() {
+	Template.productpage.onRendered(function() {
+	  $(".pages.overflow-scroll").addClass("noscroll");
+	  var scrollHeight = $(".overflow-scroll").innerHeight() - $(".searchkeywords").innerHeight();
+	  $(".searchitems").height(scrollHeight);
+	});
+  
+  Template.dashboard.onRendered(function() {
+	  IonSideMenu.snapper.disable();
+	});
+	
+	Template.dashboard.onDestroyed(function() {
 	  IonSideMenu.snapper.enable();
-	};
+	});
   
 }
 
